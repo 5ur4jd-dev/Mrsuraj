@@ -1,0 +1,195 @@
+/* Responsive Breakpoints & Mobile Optimization */
+
+/* ====================================================================
+   TABLET LANDSCAPE & PORTRAIT (max-width: 1024px)
+   ==================================================================== */
+@media (max-width: 1024px) {
+  :root {
+    --space-lg: 32px;
+    --space-xl: 48px;
+    --space-xxl: 64px;
+  }
+
+  .grid-cols-3 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+  }
+
+  .grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+  }
+}
+
+/* ====================================================================
+   MOBILE RE-ALIGNMENTS (max-width: 768px)
+   ==================================================================== */
+@media (max-width: 768px) {
+  :root {
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+    --space-xxl: 48px;
+  }
+
+  section {
+    padding: var(--space-lg) 0;
+  }
+
+  .grid-cols-2 {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .grid-cols-3 {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .grid-cols-4 {
+    grid-template-columns: 1fr;
+    gap: var(--space-xs);
+  }
+
+  /* Hamburger Toggle Display */
+  .hamburger {
+    display: flex !important;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 72px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 72px);
+    background-color: var(--color-bg-base);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-xl) var(--space-md) 100px var(--space-md);
+    border-top: 1px solid var(--color-border);
+    transition: left var(--transition-normal);
+    z-index: 998;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-link {
+    font-size: 1.2rem;
+    padding: var(--space-sm) 0;
+  }
+
+  .site-header .btn-physical {
+    display: none; /* Hide header btn in default header view on mobile */
+  }
+
+  /* Cleverly display the CTA button inside the mobile menu area when navigation is active */
+  .nav-menu.active ~ #header-cta-btn {
+    display: flex !important;
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 48px);
+    max-width: 320px;
+    justify-content: center;
+    z-index: 1002;
+    box-shadow: var(--shadow-clay-card-lift);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: var(--space-sm);
+    text-align: center;
+  }
+
+  .project-card-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .project-card-footer .btn-physical {
+    width: 100%;
+  }
+
+  /* Hero adjustments */
+  .hero-engine {
+    max-width: 100%;
+    margin-top: var(--space-md);
+  }
+}
+
+/* ====================================================================
+   EXTRA MOBILE OPTIMIZATIONS (max-width: 480px)
+   ==================================================================== */
+@media (max-width: 480px) {
+  .flex-between {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-xs);
+  }
+
+  .hero-name-heading {
+    word-break: break-all;
+  }
+
+  /* Form and inputs control */
+  input, textarea, select {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .btn-physical {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+/* Hamburger UI Component */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 32px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-text-primary);
+  border-radius: var(--radius-sm);
+  transition: transform var(--transition-normal), opacity var(--transition-normal);
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8.5px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8.5px) rotate(-45deg);
+}
+

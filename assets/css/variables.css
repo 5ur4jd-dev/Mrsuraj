@@ -1,0 +1,153 @@
+/* Design System Variables */
+:root {
+  /* Color System - Monochrome Matte Clay Material Palette */
+  --color-bg-base: #D1D1CD;
+  --color-bg-base-alt: #CCCCC8;
+  --color-bg-light: #E4E4E0;
+  --color-bg-light-alt: #DDDDD9;
+  --color-bg-mid: #B8B7B2;
+  --color-bg-mid-alt: #AEADA8;
+  --color-bg-dark: #3B3838;
+  --color-bg-dark-alt: #24201F;
+  
+  --color-text-primary: #171313;
+  --color-text-secondary: #3D3937;
+  --color-text-light: #E4E4E0;
+  --color-border: #181514;
+  --color-border-subtle: #383331;
+  --color-google-blue: #4285F4;
+  --color-google-blue-dark: #1A5FD0;
+  --color-google-blue-soft: rgba(66, 133, 244, 0.14);
+  --color-footer-bg: #3B3838;
+  --color-footer-text: #F3F0EA;
+  --color-footer-muted: #D8D5D0;
+  --color-footer-link: #E7E3DD;
+  --color-footer-heading: #FFFFFF;
+  --color-footer-section-heading: #B8B7B2;
+  --color-footer-border: #8F8984;
+
+  /* Typography */
+  --font-heading: 'Bebas Neue', 'Anton', 'Impact', sans-serif;
+  --font-body: 'Inter', 'Manrope', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Space Mono', 'IBM Plex Mono', monospace;
+
+  /* Neumorphic Shadows - Matte clay physical bevels */
+  --shadow-flat-dark: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  --shadow-flat-light: -2px -2px 5px rgba(255, 255, 255, 0.6);
+  
+  --shadow-neumorphic-out: 
+    4px 4px 10px rgba(0, 0, 0, 0.16), 
+    -4px -4px 10px rgba(255, 255, 255, 0.55);
+    
+  --shadow-neumorphic-out-deep: 
+    8px 8px 18px rgba(0, 0, 0, 0.22), 
+    -8px -8px 18px rgba(255, 255, 255, 0.7);
+
+  --shadow-neumorphic-in: 
+    inset 4px 4px 8px rgba(0, 0, 0, 0.15), 
+    inset -4px -4px 8px rgba(255, 255, 255, 0.45);
+
+  --shadow-clay-card: 
+    0px 10px 24px rgba(0, 0, 0, 0.12),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.4),
+    inset -2px -2px 4px rgba(0, 0, 0, 0.08);
+
+  --shadow-clay-card-lift: 
+    0px 18px 36px rgba(0, 0, 0, 0.18),
+    inset 3px 3px 6px rgba(255, 255, 255, 0.55),
+    inset -3px -3px 6px rgba(0, 0, 0, 0.1);
+
+  --shadow-button-raised: 
+    2px 3px 6px rgba(0, 0, 0, 0.15),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.6),
+    inset -1px -1px 2px rgba(0, 0, 0, 0.15);
+
+  --shadow-button-pressed: 
+    0px 1px 2px rgba(0, 0, 0, 0.08),
+    inset 2px 2px 4px rgba(0, 0, 0, 0.15),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.4);
+
+  /* Borders & Radii */
+  --border-width: 1.5px;
+  --border-width-bold: 3px;
+  --radius-sm: 4px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+  --radius-xl: 40px;
+  --radius-round: 50%;
+
+  /* Spacing */
+  --space-unit: 8px;
+  --space-xxs: 4px;
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 40px;
+  --space-xl: 64px;
+  --space-xxl: 96px;
+
+  /* Transitions */
+  --transition-fast: 0.15s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --transition-normal: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --transition-slow: 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+html[data-theme="dark"] {
+  --color-bg-base: #14171C;
+  --color-bg-base-alt: #101318;
+  --color-bg-light: #202631;
+  --color-bg-light-alt: #29313E;
+  --color-bg-mid: #536070;
+  --color-bg-mid-alt: #687486;
+  --color-bg-dark: #E3E8F0;
+  --color-bg-dark-alt: #F3F7FB;
+
+  --color-text-primary: #F3F7FB;
+  --color-text-secondary: #C5CDD8;
+  --color-text-light: #F3F7FB;
+  --color-border: #8EA3BD;
+  --color-border-subtle: #4D5B6D;
+  --color-google-blue-soft: rgba(66, 133, 244, 0.24);
+  --color-footer-bg: #0B0F14;
+  --color-footer-text: #F3F7FB;
+  --color-footer-muted: #D3DCE8;
+  --color-footer-link: #E4ECF7;
+  --color-footer-heading: #FFFFFF;
+  --color-footer-section-heading: #AFC4E4;
+  --color-footer-border: #607086;
+
+  --shadow-flat-dark: 2px 2px 5px rgba(0, 0, 0, 0.45);
+  --shadow-flat-light: -2px -2px 5px rgba(255, 255, 255, 0.08);
+
+  --shadow-neumorphic-out:
+    4px 4px 12px rgba(0, 0, 0, 0.42),
+    -4px -4px 12px rgba(255, 255, 255, 0.06);
+
+  --shadow-neumorphic-out-deep:
+    8px 8px 22px rgba(0, 0, 0, 0.5),
+    -8px -8px 22px rgba(255, 255, 255, 0.08);
+
+  --shadow-neumorphic-in:
+    inset 4px 4px 8px rgba(0, 0, 0, 0.45),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.08);
+
+  --shadow-clay-card:
+    0px 10px 24px rgba(0, 0, 0, 0.38),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.08),
+    inset -2px -2px 4px rgba(0, 0, 0, 0.22);
+
+  --shadow-clay-card-lift:
+    0px 18px 36px rgba(0, 0, 0, 0.48),
+    inset 3px 3px 6px rgba(255, 255, 255, 0.1),
+    inset -3px -3px 6px rgba(0, 0, 0, 0.24);
+
+  --shadow-button-raised:
+    2px 3px 8px rgba(0, 0, 0, 0.48),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.14),
+    inset -1px -1px 2px rgba(0, 0, 0, 0.3);
+
+  --shadow-button-pressed:
+    0px 1px 2px rgba(0, 0, 0, 0.24),
+    inset 2px 2px 4px rgba(0, 0, 0, 0.5),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.1);
+}
